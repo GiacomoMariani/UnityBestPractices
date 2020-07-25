@@ -6,7 +6,6 @@
 * **UNBROKEN**: Compile it. Run it. Use it. Please test the feature before sending it to review.
 * **COHESIVE**: Everything we write should look like one person writes it all.
 
-
 # VERSION CONTROL
 * Add a new *branch* for each *card* or each *bug*.
 * Add a specific folder for a new feature and gather all files there. After approval assign everything to its folder.
@@ -43,6 +42,9 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * *Structs*: structs [may be useful](https://jacksondunstan.com/articles/3453), but override `Equals` and `GetHashCode` to implement [`IEquatable`](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1?view=netframework-4.8)
 * Never overwrite source codes from the Plugin folder. Override or extend it.
 
+### DOTS
+* *Tag* use tags (empty IComponent) when you don't need to move tags each frame, otherwise use a conditional IComponent (more [here](https://gametorrahod.com/tag-component/amp/))
+
 ### CODING CONVENTIONS
 * Prioritize readability above performance, we can change code later
 * *Comments* are few and very relevant
@@ -66,6 +68,6 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * Unit Test our `domain behaviour`, from entrance to exit. Entrance may be a `Raycast`, exit may be the final `HitPoints` 
 
 #### PROFILING AND BENCHMARKING
-* Implement [performance testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
+* Implement [Performance Testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
 * Use [Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@0.2/manual/index.html) or [dotMemory](https://www.jetbrains.com/dotmemory/?gclid=Cj0KCQiAhojzBRC3ARIsAGtNtHXqI3Y3ldb3Ri0Qlgw5HuvtelE7xVpG4S_LRz-J9HmoDrqHeWJzQrcaAmuGEALw_wcB) to check for memory usage
 * Use [Profile Analyzer](https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@0.6/manual/index.html)
