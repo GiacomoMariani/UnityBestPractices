@@ -42,9 +42,6 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * *Structs*: structs [may be useful](https://jacksondunstan.com/articles/3453), but override `Equals` and `GetHashCode` to implement [`IEquatable`](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1?view=netframework-4.8)
 * Never overwrite source codes from the Plugin folder. Override or extend it.
 
-### DOTS
-* *Tag* use tags (empty IComponent) when you don't need to move tags each frame, otherwise use a conditional IComponent (more [here](https://gametorrahod.com/tag-component/amp/))
-
 ### CODING CONVENTIONS
 * Prioritize readability above performance, we can change code later
 * *Comments* are few and very relevant
@@ -70,4 +67,12 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 #### PROFILING AND BENCHMARKING
 * Implement [Performance Testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
 * Use [Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@0.2/manual/index.html) or [dotMemory](https://www.jetbrains.com/dotmemory/?gclid=Cj0KCQiAhojzBRC3ARIsAGtNtHXqI3Y3ldb3Ri0Qlgw5HuvtelE7xVpG4S_LRz-J9HmoDrqHeWJzQrcaAmuGEALw_wcB) to check for memory usage
-* Use [Profile Analyzer](https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@0.6/manual/index.html)
+* Use [Profile Analyzer](https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@0.6/manual/index.html) to check CPU performance
+* Use [Render Doc](https://renderdoc.org/) to analyze draw calls and overdraw (switching the **overlay mode** to *Quad Overdraw (Draw)*)
+* [Asset Hunter Pro](https://assetstore.unity.com/packages/tools/utilities/asset-hunter-pro-135296) might find the most large files in the build
+* Run `gci -r| sort -descending -property length | select -first [AMOUNT] name, length` to catch the larger files
+
+# ASSETS
+
+###ART
+* Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
