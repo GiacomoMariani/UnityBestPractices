@@ -35,7 +35,6 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * *Scriptable Object(SO)* Use **SO** [wisely](https://www.youtube.com/watch?v=raQ3iHhE_Kk) (also [here](https://stackoverflow.com/questions/56054864/what-is-the-best-practice-to-load-scriptableobjects-to-single-prefab-multiple-pr/56063333#56063333)), for shared values, systems and as event listeners.
 * *Strings*: use only **const strings**. Group them inside files used only for these constants.
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
-* Cache Components on Awake. Do not use GetComponent() anywhere else
 * *Logging*: contain all logs inside [JLog](https://github.com/GiacomoMariani/JReact/blob/master/JLog.cs) and avoid Debug.Logs and Print
 * Use weak parameter types and strong return types. `HighLevelClass Method (iLowLevelInterface interface);`
 * *GC Optimization*: Avoid large objects, make small objects either permanent ([pooling](https://learn.unity.com/tutorial/object-pooling)) or disposed almost instantly
@@ -48,8 +47,10 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * Follow [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 
 #### BASIC PERFORMANCE
+* Cache Components on Awake. Do not use GetComponent() anywhere else
 * Declare expected sizes for all collections. IE `new List<int>(50);`
-* Avoid casting 
+* Use `GetHashCode()` instead of `GetInstanceID()` to avoid security checks in the main thread
+* Avoid casting
 
 ### CODE QUALITY
 * **UNIT TEST PILLARS**:
@@ -74,5 +75,5 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 
 # ASSETS
 
-###ART
+### ART
 * Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
