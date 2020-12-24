@@ -12,6 +12,7 @@
 * `[NativeSetThreadIndex] private int _threadIndex` attribute [gets the thread id](https://docs.unity3d.com/ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeSetThreadIndexAttribute.html)
 * Use `RequireForUpdate(_requiredQuery);` to avoid running a `System` when the query has not changed
 * Use **Tags** (empty `IComponentData`) to partition data and you don't need to move tags each frame, otherwise use a conditional IComponentData (more [here](https://gametorrahod.com/tag-component/amp/))
+* Understand [how structs are packed](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.structlayoutattribute.pack?view=net-5.0) when using them
 
 ### LINKS
 * [Conversion (Authoring) Workflow](https://gametorrahod.com/world-system-groups-update-order-and-the-player-loop/)

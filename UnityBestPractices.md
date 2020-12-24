@@ -31,15 +31,16 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * Each **scene** runs independently
 * *UI*: each ui element have an [actor](https://gamedevacademy.org/lessons-learned-in-unity-after-5-years/) and multiple actor elements, no master components
 * *Seal*: always **seal** the end class to [help the compiler with virtual members](http://codebetter.com/patricksmacchia/2008/01/05/rambling-on-the-sealed-keyword/)
-* *Inlining*: Avoid method calls inside loops and understand [inlining optimization](https://www.codeproject.com/Tips/1072041/NET-Methods-Inlining-and-Loops)
+* *Inline*: Avoid method calls inside loops and understand [inlining optimization](https://www.codeproject.com/Tips/1072041/NET-Methods-Inlining-and-Loops)
 * *Scriptable Object(SO)* Use **SO** [wisely](https://www.youtube.com/watch?v=raQ3iHhE_Kk) (also [here](https://stackoverflow.com/questions/56054864/what-is-the-best-practice-to-load-scriptableobjects-to-single-prefab-multiple-pr/56063333#56063333)), for shared values, systems and as event listeners.
 * *Strings*: use only **const strings**. Group them inside files used only for these constants.
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
-* *Logging*: contain all logs inside [JLog](https://github.com/GiacomoMariani/JReact/blob/master/JLog.cs) and avoid Debug.Logs and Print
+* *Log*: contain all logs inside in a loggers such as [JLog](https://github.com/GiacomoMariani/JReact/blob/master/JLog.cs) and avoid Debug.Logs or Print
 * Use weak parameter types and strong return types. `HighLevelClass Method (iLowLevelInterface interface);`
 * *GC Optimization*: Avoid large objects, make small objects either permanent ([pooling](https://learn.unity.com/tutorial/object-pooling)) or disposed almost instantly
 * *Structs*: structs [may be useful](https://jacksondunstan.com/articles/3453), but override `Equals` and `GetHashCode` to implement [`IEquatable`](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1?view=netframework-4.8)
 * Never overwrite source codes from the Plugin folder. Override or extend it.
+* Isolation layers prevent vendor lock-ins on 3rd party libraries: *IE: YourAPI.GetInput() => ThirdParty.GetInput();*
 
 ### CODING CONVENTIONS
 * Prioritize readability above performance, we can change code later
@@ -75,5 +76,5 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 
 # ASSETS
 
-### ART
-* Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
+* **Art**: Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
+* **Audio**: Follow [Audio Optimization Tps](https://gamedevbeginner.com/unity-audio-optimisation-tips/) and [Audio Import Optimization](https://www.gamasutra.com/blogs/ZanderHulme/20190107/333794/Unity_Audio_Import_Optimisation__getting_more_BAM_for_your_RAM)
