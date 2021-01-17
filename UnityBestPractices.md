@@ -75,6 +75,5 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 * Run `gci -r| sort -descending -property length | select -first [AMOUNT] name, length` to catch the larger files
 
 # ASSETS
-
 * **Art**: Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
 * **Audio**: Follow [Audio Optimization Tps](https://gamedevbeginner.com/unity-audio-optimisation-tips/) and [Audio Import Optimization](https://www.gamasutra.com/blogs/ZanderHulme/20190107/333794/Unity_Audio_Import_Optimisation__getting_more_BAM_for_your_RAM)
