@@ -17,9 +17,9 @@ git commit -m “-[Tag] - [Main/Secondary] [Commit_Title]” -m “-SCENE: main 
 ```
 ### COMMIT TAGS
 
-!G | !B | !A | !N | !U | !R
------------- | ------------- | ------------- | ------------- | ------------- | -------------
-Gameplay change | Bug fix | A change on art | Network Improvement | Update of assets | Assets removal
+!G | !B | !A | !N | !U | !T | !R
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets removal
 
 # CODING
 * **Decouple** 
@@ -49,6 +49,7 @@ Gameplay change | Bug fix | A change on art | Network Improvement | Update of as
 
 #### BASIC PERFORMANCE
 * Cache Components on Awake. Do not use GetComponent() anywhere else
+* User readonly or readonly ref when the member does not change the state, valid also for property getters
 * Declare expected sizes for all collections. IE `new List<int>(50);`
 * Use `GetHashCode()` instead of `GetInstanceID()` to avoid security checks in the main thread
 * Avoid casting
