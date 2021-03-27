@@ -38,6 +38,8 @@
 **/OdinTesterUtilities.*
 **/Assets/Plugins/Editor/JetBrains.meta
 **/Assets/Plugins/Editor/JetBrains/
+**/Assets/AdvancedPlayerPrefsWindow
+**/Assets/AdvancedPlayerPrefsWindow.meta
 
 # IDE #
 #######
