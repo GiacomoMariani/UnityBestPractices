@@ -8,7 +8,7 @@
 * Generics and Interfaces can be [supported by Burst](https://jacksondunstan.com/articles/5516), also with [fluent syntax](https://jacksondunstan.com/articles/5380) 
 * Virtual Functions can be [created in Burst](https://jacksondunstan.com/articles/5494)
 * Use [JobsUtility.JobWorkerCount](https://docs.unity3d.com/2019.3/Documentation/ScriptReference/Unity.Jobs.LowLevel.Unsafe.JobsUtility.JobWorkerCount.html) to get the amount of worker in the running platform
-* Use `ArchetypeChunkEntityType EntityType;` in `IJobChunk` to catch `NativeArray<Entity> entities = chunk.GetNativeArray(EntityType);`
+* Use `EntityTypeHandle cth = entityManager.GetEntityTypeHandle();` to catch `NativeArray<Entity> entities = chunk.GetNativeArray(cth);`
 * `[NativeSetThreadIndex] private int _threadIndex` attribute [gets the thread id](https://docs.unity3d.com/ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeSetThreadIndexAttribute.html)
 * Use `RequireForUpdate(_requiredQuery);` to avoid running a `System` when the query has not changed
 * Use **Tags** (empty `IComponentData`) to partition data and you don't need to move tags each frame, otherwise use a conditional IComponentData (more [here](https://gametorrahod.com/tag-component/amp/))
