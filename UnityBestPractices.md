@@ -65,8 +65,8 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * *ACT* must be one line
 * Use readable names with underscore `Player_Dies_If_Gets_More_Damage_Than_Hit_Points`
 * Avoid `if` statements (and also `switch`) inside the test
-* Unit Test our `domain behaviour`, from entrance to exit. Entrance may be a `Raycast`, exit may be the final `HitPoints`
-* User errors should be handles with 'inform and continue'. Programmers errors should be made obvious
+* Unit Test our `domain`, from entrance (that might be `Raycast` from Unity domain) to exit (such as final `HitPoints`)
+* Handle user errors should with 'inform and continue'. Programmers errors should be made obvious
 
 #### PROFILING AND BENCHMARKING
 * Implement [Performance Testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
