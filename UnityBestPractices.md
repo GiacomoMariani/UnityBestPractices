@@ -45,6 +45,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 ### CODING CONVENTIONS
 * Prioritize readability above performance, we can change code later
 * *Comments* are few and very relevant
+* Method Signature Order: `public MyType MethodName(ref MyType myTypeRef, in MyType myTypeIn, MyType myType, out MyType myTypeOut, MyType* myTypeRead, MyType* myTypeWrite)`
 * Follow [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 
 #### BASIC PERFORMANCE
@@ -66,7 +67,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Use readable names with underscore `Player_Dies_If_Gets_More_Damage_Than_Hit_Points`
 * Avoid `if` statements (and also `switch`) inside the test
 * Unit Test our `domain`, from entrance (that might be `Raycast` from Unity domain) to exit (such as final `HitPoints`)
-* Handle user errors should with 'inform and continue'. Programmers errors should be made obvious
+* User errors should 'inform and continue'. Programmers errors should be made obvious
 
 #### PROFILING AND BENCHMARKING
 * Implement [Performance Testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
