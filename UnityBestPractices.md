@@ -51,6 +51,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Follow [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 
 #### BASIC PERFORMANCE
+* No public fields. When required use public properties with private setter.
 * Cache Components on Awake. Do not use GetComponent() anywhere else
 * User readonly or readonly ref when the member does not change the state, valid also for property getters
 * Declare expected sizes for all collections. IE `new List<int>(50);`
