@@ -1,5 +1,5 @@
 # PILLARS
-* **FOCUS**: Complete the task with the essentials. Do not ﻿assume that further features are required. 
+* **FOCUS**: Complete the task with the essentials. Do not assume that further features are required. 
 * **EFFECTIVE**: It’s better to work 2 weeks, instead of working 1 week and then spend 2 weeks solving bugs.
 * **SIMPLE**
 * **AWARE**: Bug randomly fixed by an update are not solved. Aim at understanding and solving their source cause.
@@ -23,7 +23,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 
 # CODING
 * **Decouple** 
-    * `class` max 250 lines and max 2 references to other classes (Except for composition)
+    * `class` max 500 lines and max 2 references to other classes (Except for composition)
     * `method` max 50 lines, does one thing (*cohesion*), and requires 5 parameters at most.
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
 * *Logic **or** view*: logic script contains no view script (such as UI) and viceversa
