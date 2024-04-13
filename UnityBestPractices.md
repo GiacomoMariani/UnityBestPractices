@@ -29,6 +29,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * *Logic **or** view*: logic script contains no view script (such as UI) and viceversa
     * **Views**: each view (such as UI) have a single [actor](https://gamedevacademy.org/lessons-learned-in-unity-after-5-years/) and multiple actor elements, no master components
 
+-----------------
 
 * Use **Assertions** instead of exceptions for error checking.
 * Use **Assertions** instead of flags such as `if (anything != null)`
@@ -43,17 +44,22 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * *Structs*: structs [may be useful](https://jacksondunstan.com/articles/3453), but override `Equals` and `GetHashCode` to implement [`IEquatable`](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1?view=netframework-4.8)
 * Never overwrite source codes from the Plugin folder. Override or extend it.
 * Isolation layers prevent vendor lock-ins on 3rd party libraries: *IE: YourAPI.GetInput() => ThirdParty.GetInput();*
+* Use `[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]` to run before Awake
+* Make at most 2 calls on method chains. `objectA.DoSomething().ThenSomething()`.
+  * *Exception*: do any amount of calls when using a **very stable library**.
+* Free the resource in the same process that is using it.
 
 ### CODING CONVENTIONS
 * Prioritize readability above performance, we can change code later
 * *Comments* are few and very relevant
 * Method Signature Order: `public MyType MethodName(ref MyType myTypeRef, in MyType myTypeIn, MyType myType, out MyType myTypeOut, MyType* myTypeRead, MyType* myTypeWrite)`
 * Follow [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
+* Follow [Clean Code](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
 
 #### BASIC PERFORMANCE
 * No public fields. When required use public properties with private setter.
 * Cache Components on Awake. Do not use GetComponent() anywhere else
-* User readonly or readonly ref when the member does not change the state, valid also for property getters
+* Use readonly or readonly ref when the member does not change the state, valid also for property getters
 * Declare expected sizes for all collections. IE `new List<int>(50);`
 * Use `GetHashCode()` instead of `GetInstanceID()` to avoid security checks in the main thread
 * Avoid casting
@@ -71,6 +77,11 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Avoid `if` statements (and also `switch`) inside the test
 * Unit Test our `domain`, from entrance (that might be `Raycast` from Unity domain) to exit (such as final `HitPoints`)
 * User errors should 'inform and continue'. Programmers errors should be made obvious
+* Make the code reusable, even if you won't re use it. For~~~~ a better architecture. 
+
+#### SCENE
+* Each scene is separated in: Managers, Environment, UserInterface, ~~~~Actors
+* Each scene has an entry point, used also as exit point
 
 #### PROFILING AND BENCHMARKING
 * Implement [Performance Testing](https://docs.unity3d.com/Packages/com.unity.test-framework.performance@1.0/manual/index.html) following [this guide](https://blogs.unity3d.com/2018/09/25/performance-benchmarking-in-unity-how-to-get-started/)
