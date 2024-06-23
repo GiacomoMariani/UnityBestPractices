@@ -50,12 +50,12 @@
 
 ### Animations
 
-| Asset Type | Prefix | Suffix | Notes |
-| -------------------- | ------ | ------ | ----- |
-| Animation Clip | A_     | | |
-| Animation Controller | AC_    | | |
-| Avatar Mask | AM_    | | |
-| Morph Target | MT_    | | |
+| Asset Type           | Prefix | Suffix | Notes |
+|----------------------|--------|--------|-------|
+| Animation Clip       | A_     |        |       |
+| Animation Controller | AC_    |        |       |
+| Avatar Mask          | AM_    |        |       |
+| Morph Target         | MT_    |        |       |
 
 ## Artificial Intelligence
 

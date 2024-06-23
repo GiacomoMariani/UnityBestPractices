@@ -22,7 +22,8 @@ MIT License
 ------------------------
 ## Odin Inspector and Serializer
 https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041  
-Boosts editor performance; allows data serialization.  
+Boosts workflow performance of 5%-10%; allows data serialization.
+Especially useful for design or art pipelines.
 Asset Store - Seat License
 ------------------------
 ## More Effective Coroutines[PRO]
@@ -33,6 +34,10 @@ Asset Store - Seat License
 ## Playfab SDK
 https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/  
 Connects functionalities with Playfab services.  
+- Player and Title Data
+- Analytics
+- Server Pipeline
+- Multiplayer backend services (matchmaking, party)
 Apache 2.0 License
 ------------------------
 ## Photon Fusion SDK
@@ -87,8 +92,9 @@ Enhances Unity Editor with useful attributes and tools for cleaner code.
 MIT License
 --------------------------------
 # Photon Services
-Fusion - https://www.photonengine.com  
-Voice - https://doc.photonengine.com/voice  
+Fusion - https://www.photonengine.com/fusion (State Network Architecture)  
+Quantum - https://www.photonengine.com/quantum (Deterministic Lockstep Architecture)  
+Voice - https://doc.photonengine.com/voice  (Voice Service)  
 Enable multiplayer services
 Pricing:  https://www.photonengine.com/fusion/pricing
 --------------------------------
