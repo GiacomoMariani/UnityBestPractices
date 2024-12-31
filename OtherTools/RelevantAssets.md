@@ -31,6 +31,11 @@ https://assetstore.unity.com/packages/tools/animation/more-effective-coroutines-
 Enhances Unity Coroutine performance.  
 Asset Store - Seat License
 ------------------------
+## Clean & Minimalist GUI Pack
+https://assetstore.unity.com/packages/2d/gui/clean-minimalist-gui-pack-75123    
+Used to beautify the ui in a fast way
+Asset Store - Seat License
+------------------------
 ## Playfab SDK
 https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/  
 Connects functionalities with Playfab services.  

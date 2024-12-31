@@ -7,7 +7,8 @@
 * **COHESIVE**: Everything we write should look like one person writes it all.
 
 # VERSION CONTROL
-* Add a new *branch* for each *card* or each *bug*.
+* Create a new *branch* for each *card* or each *bug*.
+  * This branch should be based on the main/master branch and remain independent from any unconfirmed features. 
 * Add a specific folder for a new feature and gather all files there. After approval assign everything to its folder.
 * `merge master` inside your branch before asking a review
 * Create proper commits: 
@@ -23,7 +24,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 
 # CODING
 * **Decouple** 
-    * `class` max 500 lines and max 2 references to other classes (Except for composition)
+    * `class` max 300 lines and max 2 references to other classes (Except for composition)
     * `method` max 50 lines, does one thing (*cohesion*), and requires 5 parameters at most.
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
 * *Logic **or** view*: logic script contains no view script (such as UI) and viceversa
@@ -94,3 +95,4 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 # ASSETS
 * **Art**: Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
 * **Audio**: Follow [Audio Optimization Tps](https://gamedevbeginner.com/unity-audio-optimisation-tips/) and [Audio Import Optimization](https://www.gamasutra.com/blogs/ZanderHulme/20190107/333794/Unity_Audio_Import_Optimisation__getting_more_BAM_for_your_RAM)
+* **Coding Patterns**: [Unity Patterns Ebook](https://unity.com/resources/level-up-your-code-with-game-programming-patterns)

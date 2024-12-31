@@ -9,13 +9,6 @@ the features strictly required for the game (IE the main menu).
 You might decide the project on your own, but if you want there's plenty of courses to start with. I've not tested them
 on my side, so put a grain of salt when choosing them.
 
-### Courses and learning material
-
-- [Unity Learning Resources](https://learn.unity.com/)
-- [quill18creates](https://www.youtube.com/user/quill18creates) Youtube Channel
-- (Paid) [Udemy](https://www.udemy.com/topic/unity/)
-- (Paid) [Coursera](https://www.coursera.org/courses?query=unity)
-
 ## UNITY DEVELOPER
 
 When you finish your first project you might be able to start directly with these articles. Otherwise get back to the
@@ -25,7 +18,9 @@ previous step.
   choose any advanced ones
 - Videos - [Sebastian Lague - Old videos](https://www.youtube.com/c/SebastianLague/videos) - the last ones about coding
   adventures are advanced
+- Videos - [quill18creates](https://www.youtube.com/@quill18creates/playlists) with topics for different skill levels
 - Book - [Game Programming Patterns](https://gameprogrammingpatterns.com/), by Robert Nystrom
+- List of [Unity Tips](https://www.binaryimpact.de/unitytip/)
 
 ## UNITY SENIOR
 
@@ -33,6 +28,7 @@ previous step.
 - Book - [The Nature of Code](https://natureofcode.com/), by Daniel Shiffman, simulates the rules of Physics
 - Book - [Data Oriented Design](https://www.dataorienteddesign.com/dodmain/) by Richard Fabian, mandatory after you
   start with Unity DOTS
+- [Unity How-To](https://unity.com/how-to) articles and e-books
 
 ## ADVANCED GAME DEVELOPER
 
@@ -40,6 +36,7 @@ previous step.
   also C++ for C# developers
 - Blog (Networking) - [GafferOnGames](https://gafferongames.com/)
 - Blog (Multithreading) - [1024 Cores](https://www.1024cores.net/home/lock-free-algorithms/introduction)
+- Books (Artificial Intelligence) - [Game AI Pro](https://www.gameaipro.com/)
 
 # GENERAL TOOLS
 
@@ -48,8 +45,8 @@ previous step.
 You will meet different challenges and you will need to search for solutions. Google might be of help. Otherwise try
 also.
 
-- [Microsoft Documents C#](https://docs.microsoft.com/en-us/dotnet/csharp/) these are very useful.
-- [Unity Answer](https://answers.unity.com/index.html)
+- [Unity Learning Resources](https://learn.unity.com/)
+- - [Microsoft Documents C#](https://docs.microsoft.com/en-us/dotnet/csharp/) these are very useful.
 - [Stack Overflow](https://stackoverflow.com/)
 - [Unity 3d Reddit](https://www.reddit.com/r/Unity3D/) and [Unity 2d Reddit](https://www.reddit.com/r/Unity2D/)
 
@@ -61,6 +58,11 @@ You might use third party assets to fill your game project. There's plenty of fr
 - [Game Dev Market](https://www.gamedevmarket.net/)
 - [itch.io](https://itch.io/game-assets)
 
+### Courses and learning material
+
+- (Paid) [Udemy](https://www.udemy.com/topic/unity/)
+- (Paid) [Coursera](https://www.coursera.org/courses?query=unity)
+
 ## Other Departments
 
 Working on game development means collaborating with different skill sets and it is very important, especially to
@@ -70,7 +72,7 @@ gameplay programmers, to learn and understand different topics.
 
 - (Paid) [Art of Game Design](https://www.schellgames.com/art-of-game-design/), by Jesse Schell, the best book on game
   design
-- Videos - [Extra Credits](https://en.wikipedia.org/wiki/List_of_Extra_Credits_episodes#Season_6) Up to season 7
+- Videos - [Extra Credits](https://en.wikipedia.org/wiki/List_of_Extra_Credits_episodes#Season_6) Especially the first 4 seasons
 - Videos - [Game Maker Toolkit](https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw)
 
 ### ANIMATION
@@ -82,11 +84,8 @@ gameplay programmers, to learn and understand different topics.
 ### UX
 
 - (Paid) Book - [The Gamer's Brain](https://celiahodent.com/video-game-ux-psychology/), by Celia Hodent
-- (Paid) Book - [Design of Everyday Things](https://www.nngroup.com/books/design-everyday-things-revised/), by Dan
-  Norman
+- (Paid) Book - [Design of Everyday Things](https://www.nngroup.com/books/design-everyday-things-revised/), by Dan Norman
 
 ### GAME WRITING
 
-- (Paid) Book
-  - [Video Game Writing: From Macro to Micro](https://www.google.it/books/edition/Video_Game_Writing/V86rDgAAQBAJ?hl=it&gbpv=1&printsec=frontcover)
-  , by Marek Walton and Maurice Suckling
+- (Paid) Book - [Video Game Writing: From Macro to Micro](https://www.google.it/books/edition/Video_Game_Writing/V86rDgAAQBAJ?hl=it&gbpv=1&printsec=frontcover), by Marek Walton and Maurice Suckling
