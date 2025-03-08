@@ -2,7 +2,7 @@
 By following this cycle, we ensure efficient tracking and resolution of bugs, enhancing the gaming experience for our players.
 
 > [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1LNdct-WaCKsDy7CDXHHy1dl1m-I6oN0SKzLdmGCc_zQ)
-> ~~~~
+> 
 > https://docs.google.com/spreadsheets/d/1LNdct-WaCKsDy7CDXHHy1dl1m-I6oN0SKzLdmGCc_zQ
 
 ## Report Template

@@ -26,8 +26,9 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * **Decouple** 
     * `class` max 300 lines and max 2 references to other classes (Except for composition)
     * `method` max 50 lines, does one thing (*cohesion*), and requires 5 parameters at most.
+    * `inheritance` max 2 levels of inheritance in our Domain. 3 in exceptional cases
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
-* *Logic **or** view*: logic script contains no view script (such as UI) and viceversa
+* *Logic **or** view*: logic script contains no view script and viceversa (IE health logic is separate from health UI)
     * **Views**: each view (such as UI) have a single [actor](https://gamedevacademy.org/lessons-learned-in-unity-after-5-years/) and multiple actor elements, no master components
 
 -----------------
@@ -35,15 +36,15 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Use **Assertions** instead of exceptions for error checking.
 * Use **Assertions** instead of flags such as `if (anything != null)`
 * Each **scene** runs independently
-* *Seal*: always **seal** the end class to [help the compiler with virtual members](http://codebetter.com/patricksmacchia/2008/01/05/rambling-on-the-sealed-keyword/)
-* *Inline*: Avoid method calls inside loops and understand [inlining optimization](https://www.codeproject.com/Tips/1072041/NET-Methods-Inlining-and-Loops)
-* *Scriptable Object(SO)* Use **SO** [wisely](https://www.youtube.com/watch?v=raQ3iHhE_Kk) (also [here](https://stackoverflow.com/questions/56054864/what-is-the-best-practice-to-load-scriptableobjects-to-single-prefab-multiple-pr/56063333#56063333)), for shared values, systems and as event listeners.
+* *Seal*: **seal** the end class to [help the compiler with virtual members](http://codebetter.com/patricksmacchia/2008/01/05/rambling-on-the-sealed-keyword/)
+* *Inline*: Avoid method calls inside performance loops and understand [inlining optimization](https://www.codeproject.com/Tips/1072041/NET-Methods-Inlining-and-Loops)
+* *Scriptable Object(SO)* Use **SO** [wisely](https://www.youtube.com/watch?v=raQ3iHhE_Kk) (also [here](https://stackoverflow.com/questions/56054864/what-is-the-best-practice-to-load-scriptableobjects-to-single-prefab-multiple-pr/56063333#56063333)), for shared values and library content. The best SO is stateless.
 * *Strings*: use only **const strings**. Group them inside files used only for these constants.
-* *Log*: contain all logs inside in a loggers such as [JLog](https://github.com/GiacomoMariani/JReact/blob/master/JLog.cs) and avoid Debug.Logs or Print
+* *Log*: isolate logging (IE [JLog](https://github.com/GiacomoMariani/JReact/blob/master/JLog.cs)) and avoid Debug.Logs or Print
 * Use weak parameter types and strong return types. `HighLevelClass Method (iLowLevelInterface interface);`
 * *GC Optimization*: Avoid large objects, make small objects either permanent ([pooling](https://learn.unity.com/tutorial/object-pooling)) or disposed almost instantly
 * *Structs*: structs [may be useful](https://jacksondunstan.com/articles/3453), but override `Equals` and `GetHashCode` to implement [`IEquatable`](https://docs.microsoft.com/en-us/dotnet/api/system.iequatable-1?view=netframework-4.8)
-* Never overwrite source codes from the Plugin folder. Override or extend it.
+* Never overwrite source codes from third party libraries. Override or extend it.
 * Isolation layers prevent vendor lock-ins on 3rd party libraries: *IE: YourAPI.GetInput() => ThirdParty.GetInput();*
 * Use `[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]` to run before Awake
 * Make at most 2 calls on method chains. `objectA.DoSomething().ThenSomething()`.
@@ -78,10 +79,10 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Avoid `if` statements (and also `switch`) inside the test
 * Unit Test our `domain`, from entrance (that might be `Raycast` from Unity domain) to exit (such as final `HitPoints`)
 * User errors should 'inform and continue'. Programmers errors should be made obvious
-* Make the code reusable, even if you won't re use it. For~~~~ a better architecture. 
+* Make the code reusable, even if you won't re use it. For a better architecture. 
 
 #### SCENE
-* Each scene is separated in: Managers, Environment, UserInterface, ~~~~Actors
+* Each scene is separated in: Services, Environment, UserInterface, Actors
 * Each scene has an entry point, used also as exit point
 
 #### PROFILING AND BENCHMARKING
