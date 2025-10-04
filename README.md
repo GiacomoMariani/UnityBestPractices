@@ -8,9 +8,9 @@
 
 # VERSION CONTROL
 * Create a new *branch* for each *card* or each *bug*.
-  * This branch should be based on the main/master branch and remain independent from any unconfirmed features.
-* Add a specific folder for a new feature and gather all files there. After approval assign everything to its folder.
+    * This branch should be based on the main/master branch and remain independent from any unconfirmed features.
 * `merge master` inside your branch before asking a review
+    * Add a video showing the feature in action inside the MR
 * Create proper commits:
 ```
 git commit -m “-[Tag] - [Main/Secondary] [Commit_Title]” -m “-SCENE: main changes in scene 
@@ -24,12 +24,12 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 
 # CODING
 * **Decouple**
-  * `class` max 300 lines and max 2 references to other classes (Except for composition)
-  * `method` max 50 lines, does one thing (*cohesion*), and requires 5 parameters at most.
-  * `inheritance` max 2 levels of inheritance in our Domain. 3 in exceptional cases
+    * `class` max 300 lines and max 2 references to other classes (Except for composition)
+    * `method` max 50 lines, does one thing (*cohesion*), and requires 5 parameters at most.
+    * `inheritance` max 2 levels of inheritance in our Domain. 3 in exceptional cases
 * *Command-query separation (CQS)*: Implement either **Command** (change/noreturn) or **Query** (nochange/return)
 * *Logic **or** view*: logic script contains no view script and viceversa (IE health logic is separate from health UI)
-  * **Views**: each view (such as UI) have a single [actor](https://gamedevacademy.org/lessons-learned-in-unity-after-5-years/) and multiple actor elements, no master components
+    * **Views**: each view (such as UI) have a single [actor](https://gamedevacademy.org/lessons-learned-in-unity-after-5-years/) and multiple actor elements, no master components
 
 -----------------
 
@@ -47,8 +47,9 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Never overwrite source codes from third party libraries. Override or extend it.
 * Isolation layers prevent vendor lock-ins on 3rd party libraries: *IE: YourAPI.GetInput() => ThirdParty.GetInput();*
 * Use `[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]` to run before Awake
+* Use `[DidReloadScripts]` for weaving
 * Make at most 2 calls on method chains. `objectA.DoSomething().ThenSomething()`.
-  * *Exception*: do any amount of calls when using a **very stable library**.
+    * *Exception*: do any amount of calls when using a **very stable library**.
 * Free the resource in the same process that is using it.
 
 ### CODING CONVENTIONS
@@ -68,10 +69,10 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 
 ### CODE QUALITY
 * **UNIT TEST PILLARS**:
-  1. RESISTANCE TO REFACTORING (MANDATORY): refactoring does not produce false positives
-  2. PROTECTION AGAINST REGRESSION: test will find the bugs correctly
-  3. FAST FEEDBACK: the test must be fast to execute
-  4. MAINTAINABILITY: the test is easy to understand and to run
+    1. RESISTANCE TO REFACTORING (MANDATORY): refactoring does not produce false positives
+    2. PROTECTION AGAINST REGRESSION: test will find the bugs correctly
+    3. FAST FEEDBACK: the test must be fast to execute
+    4. MAINTAINABILITY: the test is easy to understand and to run
 * Separate `//ARRANGE`, `//ACT` and `//ASSERT` with comments
 * *ARRANGE* may use a Factory method if we need the same code (avoid `[SetUp]`)
 * *ACT* must be one line
@@ -82,7 +83,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Make the code reusable, even if you won't re use it. For a better architecture.
 
 #### SCENE
-* Each scene is separated in: Managers, Environment, UserInterface, Actors
+* Each scene is separated in: Services, Environment, UserInterface, Actors
 * Each scene has an entry point, used also as exit point
 
 #### PROFILING AND BENCHMARKING
@@ -97,4 +98,4 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * **Art**: Follow [Art Asset Best Practices](https://docs.unity3d.com/Manual/HOWTO-ArtAssetBestPracticeGuide.html) and [ARM Guide for Developers](https://developer.arm.com/solutions/graphics-and-gaming/gaming-engine/unity/arm-guide-for-unity-developers)
 * **Audio**: Follow [Audio Optimization Tps](https://gamedevbeginner.com/unity-audio-optimisation-tips/) and [Audio Import Optimization](https://www.gamasutra.com/blogs/ZanderHulme/20190107/333794/Unity_Audio_Import_Optimisation__getting_more_BAM_for_your_RAM)
 * **Coding Patterns**: [Unity Patterns Ebook](https://unity.com/resources/level-up-your-code-with-game-programming-patterns)
-
+~~~~

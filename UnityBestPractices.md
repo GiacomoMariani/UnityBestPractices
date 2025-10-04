@@ -9,8 +9,8 @@
 # VERSION CONTROL
 * Create a new *branch* for each *card* or each *bug*.
   * This branch should be based on the main/master branch and remain independent from any unconfirmed features. 
-* Add a specific folder for a new feature and gather all files there. After approval assign everything to its folder.
 * `merge master` inside your branch before asking a review
+  * Add a video showing the feature in action inside the MR
 * Create proper commits: 
 ```
 git commit -m “-[Tag] - [Main/Secondary] [Commit_Title]” -m “-SCENE: main changes in scene 
