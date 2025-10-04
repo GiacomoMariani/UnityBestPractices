@@ -34,7 +34,6 @@
 **/Assets/FlipbookGames.meta
 **/Assets/QHierarchy
 **/Assets/QHierarchy.meta
-**/Assets/AssetStoreTools*
 **/OdinTesterUtilities.*
 **/Assets/Plugins/Editor/JetBrains.meta
 **/Assets/Plugins/Editor/JetBrains/
@@ -48,12 +47,15 @@
 **/Assets/Plugins/MonKey\ Commander.meta
 **/Assets/BuildReport
 **/Assets/BuildReport.meta
+**/Assets/vHierarchy
+**/Assets/vHierarchy.meta
 
 # IDE #
 #######
 **/.vs/
 **/.vscode/
 **/.idea/
+*.sln.iml
 
 # GRADLE CACHE DIRECTOR #
 #########################
@@ -73,8 +75,6 @@
 *.pidb
 *.booproj
 *.svd
-*.pdb
-*.mdb
 *.opendb
 *.VC.db
 *LICENSE.meta
@@ -106,16 +106,6 @@
 **/ehthumbs.db
 **/[Tt]humbs.db
 **/[Dd]esktop.ini
-**/Corridor/Library/ShaderCache/
-**/Corridor/Library/metadata/
-
-# COMPILED SOURCE #
-###################
-*.com
-*.class
-*.exe
-*.o
-*.so
 
 # PACKAGES #
 ############
@@ -125,7 +115,6 @@
 *.dmg
 *.gz
 *.iso
-*.jar
 *.rar
 *.tar
 *.zip
@@ -136,21 +125,20 @@
 *.sql
 *.sqlite
 
-
 ### FMOD Unity Integration ###
 ######################
 # Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.
-!/[Aa]ssets/Plugins/FMOD/**/*.dll
+!**/[Aa]ssets/Plugins/FMOD/**/*.dll
 
 # Don't ignore images and gizmos used by FMOD in the Unity Editor
-!/[Aa}ssets/Gizmos/FMOD/*
-!/[Aa}ssets/Editor Default Resources/FMOD/*
+!**/[Aa]ssets/Gizmos/FMOD/**
+!**/[Aa]ssets/Editor Default Resources/FMOD/**
 
 # Ignore the Cache-file since it is updated locally either way
-/[Aa]ssets/**/FMODStudioCache.asset
-/[Aa]ssets/**/FMODStudioCache.asset.meta
-/[Aa]ssets/Plugins/FMOD/Cache.meta
-/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+**/[Aa]ssets/**/FMODStudioCache.asset
+**/[Aa]ssets/**/FMODStudioCache.asset.meta
+**/[Aa]ssets/Plugins/FMOD/Cache.meta
+**/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
 
 # Log-files
 fmod.log

@@ -47,6 +47,7 @@ Gameplay | Bug fix | Art | Network/Multiplayer | Assets Update | Tools | Assets 
 * Never overwrite source codes from third party libraries. Override or extend it.
 * Isolation layers prevent vendor lock-ins on 3rd party libraries: *IE: YourAPI.GetInput() => ThirdParty.GetInput();*
 * Use `[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]` to run before Awake
+* Use `[DidReloadScripts]` for weaving
 * Make at most 2 calls on method chains. `objectA.DoSomething().ThenSomething()`.
   * *Exception*: do any amount of calls when using a **very stable library**.
 * Free the resource in the same process that is using it.
